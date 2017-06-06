@@ -32,7 +32,6 @@
                 getStandards({
                     name: para
                 }).then(response => {
-                    console.log(response);
                     this.items = response.data.standards[0].children;
                 });
             }

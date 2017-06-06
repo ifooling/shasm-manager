@@ -3,7 +3,6 @@ import Mock from 'mockjs'
 const StandardData = Mock.mock({
     'data|8': [
         {
-            id: Mock.Random.guid(),
             'name|+1': [
                 '智能底图',
                 '三维场景',
@@ -15,8 +14,12 @@ const StandardData = Mock.mock({
                 '其他'
             ],
             'children|1-8': [{
-                name: Mock.Random.cname(),
-                icon: Mock.Random.image('150x150')
+                name() {
+                    return Mock.Random.cname()
+                },
+                icon() {
+                    return Mock.Random.image('150x150', Mock.Random.hex(), Mock.Random.cname())
+                }
             }]
         }
     ]
@@ -37,7 +40,7 @@ const OrganizationData = Mock.mock({
                 '其他'
             ],
             'children|1-8': [{
-                name: Mock.Random.cname(),
+                name: Mock.mock('@cname'),
                 icon: Mock.Random.image('150x150')
             }]
         }

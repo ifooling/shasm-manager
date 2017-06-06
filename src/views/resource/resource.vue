@@ -43,6 +43,7 @@
             getStandardData() {
                 getStandards().then(response => {
                     this.standards = response.data.standards;
+                    console.log(this.standards);
                 });
             },
             getOrganizationData() {
