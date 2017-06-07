@@ -1,7 +1,7 @@
 <template>
     <div class="layout">
         <NavHeader/>
-        <AppMain/>
+        <app-main/>
     </div>
 </template>
 

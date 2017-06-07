@@ -5,8 +5,7 @@ import Login from 'views/login/login'
 import Layout from 'views/layout'
 import Project from 'views/project/project'
 import User from 'views/user/user'
-import Resource from 'views/resource/resource'
-import ResourceList from 'views/resourceList/resourceList'
+import { Resource, ResourceViewer } from 'views/resource'
 
 Vue.use(Router)
 
@@ -30,7 +29,7 @@ export default new Router({
             children: [{
                 path: 'standard/:name',
                 name: 'resourceList',
-                component: ResourceList
+                component: ResourceViewer
             }]
         }]
     }, {

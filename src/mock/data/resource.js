@@ -18,7 +18,7 @@ const StandardData = Mock.mock({
                     return Mock.Random.cname()
                 },
                 icon() {
-                    return Mock.Random.image('150x150', Mock.Random.hex(), Mock.Random.cname())
+                    return Mock.Random.dataImage('150x150', this.name)
                 }
             }]
         }

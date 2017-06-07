@@ -1,6 +1,6 @@
 <template>
-    <el-row>
-        <el-col :span="5" v-for="item in items" :key="item">
+    <el-row :gutter="30">
+        <el-col :span="8" v-for="item in items" :key="item">
             <Card>
                 <div style="text-align:center">
                     <img :src="item.icon">

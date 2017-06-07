@@ -1,7 +1,7 @@
 <template>
-    <el-row>
-        <el-col :span="5">
-            <Menu theme="light" :open-names="['1']" accordion @on-select="standardItemSelect">
+    <Row :gutter="24">
+        <i-col :span="4" offset="1">
+            <Menu theme="light" width="auto" :open-names="['1']"  @on-select="standardItemSelect">
                 <Submenu name="1">
                     <template slot="title">
                         <Icon type="ios-paper"></Icon>
@@ -21,13 +21,13 @@
                     </Menu-item>
                 </Submenu>
             </Menu>
-        </el-col>
-        <el-col :span="19">
+        </i-col>
+        <i-col :span="19" >
             <transition name="fade" mode="out-in">
                 <router-view></router-view>
             </transition>
-        </el-col>
-    </el-row>
+        </i-col>
+    </Row>
 </template>
 <script>
     import { getStandards, getOrganizations } from 'api/resource'
